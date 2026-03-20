@@ -19,11 +19,11 @@
 
 | Строка | Обращаемый член | Модификатор | Компилируется? (да/нет) | Причина |
 |--------|----------------|-------------|:-----------------------:|---------|
-| A | `emp.name` | | | |
-| B | `emp.age` | | | |
-| C | `emp.salary` | | | |
-| D | `emp.password` | | | |
-| E | `emp.getRole()` | | | |
-| F | `emp.promote(5000)` | | | |
-| G | `emp.printSummary()` | | | |
-| H | `emp.validatePassword("secret")` | | | |
+| A | `emp.name` | |           Да            |Поле name имеет модификатор public |
+| B | `emp.age` | |           Нет           | Поле age имеет модификатор protected|
+| C | `emp.salary` | |           Нет           | Поле salary имеет модификатор default (package-private |
+| D | `emp.password` | |           Нет           | |
+| E | `emp.getRole()` | |           Да            | |
+| F | `emp.promote(5000)` | |                         | |
+| G | `emp.printSummary()` | |                         | |
+| H | `emp.validatePassword("secret")` | |                         | |
