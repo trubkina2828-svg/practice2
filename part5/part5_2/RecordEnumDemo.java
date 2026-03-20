@@ -43,7 +43,14 @@ public class RecordEnumDemo {
             //      };
             //   2. if (kelvin < 0) throw new IllegalArgumentException("Ниже абсолютного нуля");
             // ▼ ВАШ КОД ЗДЕСЬ ▼
-
+            double kelvin = switch (unit) {
+                case CELSIUS -> value + 273.15;
+                case FAHRENHEIT -> (value - 32) * 5.0 / 9.0 + 273.15;
+                case KELVIN -> value;
+            };
+            if (kelvin < 0) {
+                throw new IllegalArgumentException("Ниже абсолютного нуля");
+            }
             // ▲ КОНЕЦ ВАШЕГО КОДА ▲
         }
 
