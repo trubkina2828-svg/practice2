@@ -165,7 +165,15 @@ return "";
          */
         public void printCatalog() {
             // ▼ ВАШ КОД ЗДЕСЬ ▼
-
+            for (LibraryItem item : items) {
+                if (item instanceof PhysicalBook) {
+                    PhysicalBook pb = (PhysicalBook) item;
+                    System.out.println("Физ.: " + pb.getInfo());
+                } else if (item instanceof EBook) {
+                    EBook eb = (EBook) item;
+                    System.out.println("Эл.:  " + eb.getInfo());
+                }
+            }
             // ▲ КОНЕЦ ВАШЕГО КОДА ▲
         }
 
@@ -192,7 +200,7 @@ return "";
          */
         public double totalValue() {
             // ▼ ВАШ КОД ЗДЕСЬ ▼
-return 0.0;
+            return items.stream().mapToDouble(i -> i.book().price()).sum();
             // ▲ КОНЕЦ ВАШЕГО КОДА ▲
         }
 
@@ -204,7 +212,9 @@ return 0.0;
          */
         public Optional<Book> mostExpensive() {
             // ▼ ВАШ КОД ЗДЕСЬ ▼
-return null;
+            return items.stream()
+                    .map(LibraryItem::book)
+                    .max(Comparator.comparingDouble(Book::price));
            // ▲ КОНЕЦ ВАШЕГО КОДА ▲
         }
 
