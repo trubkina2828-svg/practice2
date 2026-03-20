@@ -43,33 +43,33 @@ public class StringPoolLab {
         // Прогноз: ____ (true/false). Причина: ____
         System.out.println("s1 == s2      : " + (s1 == s2));
         System.out.println("s1.equals(s2) : " + s1.equals(s2));
-        System.out.println();
+        System.out.println("Прогноз: true (true/false). Причина: Один и тот же объект");
 
         // TODO: запишите свой прогноз ПЕРЕД запуском
         // Прогноз: ____ (true/false). Причина: ____
         System.out.println("s1 == s3      : " + (s1 == s3));
         System.out.println("s1.equals(s3) : " + s1.equals(s3));
-        System.out.println();
+        System.out.println("Прогноз: false (true/false). Причина: Разные объекты");
 
         // Прогноз: ____ (true/false). Причина: ____
         System.out.println("s3 == s4      : " + (s3 == s4));
         System.out.println("s3.equals(s4) : " + s3.equals(s4));
-        System.out.println();
+        System.out.println("Прогноз: false (true/false). Причина: Оба созданы через new");
 
         // Прогноз: ____ (true/false). Причина: ____
         System.out.println("s1 == s5      : " + (s1 == s5));
         System.out.println("s1.equals(s5) : " + s1.equals(s5));
-        System.out.println();
+        System.out.println("Прогноз: true (true/false). Причина:  Возвращает ссылку из пула");
 
         // Прогноз: ____ (true/false). Причина: ____
         System.out.println("s1 == s6      : " + (s1 == s6));
         System.out.println("s1.equals(s6) : " + s1.equals(s6));
-        System.out.println();
+        System.out.println("Прогноз: false (true/false). Причина: ___");
 
         // Прогноз: ____ (true/false). Причина: ____
         System.out.println("s1 == s7      : " + (s1 == s7));
         System.out.println("s1.equals(s7) : " + s1.equals(s7));
-        System.out.println();
+        System.out.println("Прогноз: false (true/false). Причина: ____");
 
         // === StringBuilder ===
 
@@ -81,5 +81,6 @@ public class StringPoolLab {
         // Прогноз: ____ (true/false). Причина: ____
         System.out.println("s1 == s8      : " + (s1 == s8));
         System.out.println("s1.equals(s8) : " + s1.equals(s8));
+        System.out.println("Прогноз: false (true/false). Причина: ____");
     }
 }
